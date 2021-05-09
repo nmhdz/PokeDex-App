@@ -1,4 +1,14 @@
 alert('Hello World');
 
-let favoriteFood = 'Chicken';
-document.write(favoriteFood);
+  {
+    name: "Venusaur",
+    height: 2,
+    types: ['grass', 'poison']
+  }
+
+  {
+    name: "Weedle",
+    height: 3,
+    types: ['bug', 'poison']
+  }
+]
