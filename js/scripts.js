@@ -12,10 +12,8 @@ let pokemonList = [
    types: ['bug', 'poison']}
 ];
 
-for (let i = 0; i < pokemonList.length; i++) {
-  if (pokemonList[i].height > 1) {
-    document.write("<p>" + pokemonList[i].name + " (height: " + pokemonList[i].height + ")" + " -Wow, that\'s big!" + "</p>");
-  }else {
-    document.write("<p>" + pokemonList[i].name + " (height: " + pokemonList[i].height + ") " + "</p>");
-  }
-};
+
+function myLoopFunction(pokemon){
+  document.write("<p>" + pokemon.name + " " + " (height: " + pokemon.height + ")" + " " + "(type: " + pokemon.types + ")" +"</p>");
+}
+pokemonList.forEach(myLoopFunction);
