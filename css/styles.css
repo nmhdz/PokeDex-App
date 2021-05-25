@@ -1,8 +1,14 @@
-.main-list-button{
+/*fonts
+'Raleway', sans-serif;
+'Bitter', serif;
+*/
+.main-list-button {
   background-color: #f0f5f9;
   color: #1e2022;
   width: 200px;
   height: 50px;
   border: solid 1px #52616b;
   border-radius: 5px;
+  font-family: 'Bitter', serif;
+  font-size: 14px;
 }
