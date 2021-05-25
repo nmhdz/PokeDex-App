@@ -34,6 +34,12 @@ let pokemonRepository = (function() {
 
 
 function myLoopFunction(pokemon) {
-  document.write("<p>" + pokemon.name + " " + " (height: " + pokemon.height + ")" + " " + "(type: " + pokemon.types + ")" + "</p>");
+  let mainList = document.querySelector('ul');
+  let listItem = document.createElement('li');
+  let button = document.createElement('button');
+  button.innerText = pokemon.name;
+  button.classList.add('main-list-button');
+  listItem.appendChild(button);
+  mainList.appendChild(listItem);
 }
 pokemonRepository.getAll().forEach(myLoopFunction);
