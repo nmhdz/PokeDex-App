@@ -23,6 +23,23 @@ let pokemonRepository = (function() {
     mainList.appendChild(listItem);
   }
 
+  function loadList() {
+    return fetch(apiUrl).then(function(response) {
+      return response.json();
+    }).then(function(json) {
+      json.results.forEach(function(item) {
+        let pokemon = {
+          name: item.name,
+          detailsUrl: item.url
+        };
+        add(pokemon);
+        console.log(pokemon);
+      });
+    }).catch(function(e) {
+      console.error(e);
+    })
+  }
+
   function showDetails(pokemon) {
     console.log(pokemon);
   }
@@ -30,12 +47,14 @@ let pokemonRepository = (function() {
   return {
     getAll: getAll,
     add: add,
-    addListItem: addListItem
+    addListItem: addListItem,
+    loadList: loadList
   };
 })();
 
 
-function myLoopFunction(pokemon) {
-  pokemonRepository.addListItem(pokemon);
-}
-pokemonRepository.getAll().forEach(myLoopFunction);
+pokemonRepository.loadList().then(function() {
+  pokemonRepository.getAll().forEach(function(pokemon) {
+    pokemonRepository.addListItem(pokemon);
+  });
+});
