@@ -53,8 +53,10 @@ let pokemonRepository = (function() {
     });
   }
 
-  function showDetails(pokemon) {
-    console.log(pokemon);
+  function showDetails(item) {
+    pokemonRepository.loadDetails(item).then(function () {
+      console.log(item);
+    });
   }
 
   return {
@@ -62,7 +64,8 @@ let pokemonRepository = (function() {
     add: add,
     addListItem: addListItem,
     loadList: loadList,
-    loadDetails: loadDetails
+    loadDetails: loadDetails,
+    showDetails: showDetails
   };
 })();
 
