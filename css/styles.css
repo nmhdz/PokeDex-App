@@ -6,7 +6,7 @@ body {
   font-family: 'Karla', sans-serif;
   font-size: 12px;
   text-align: center;
-  background-image: linear-gradient(0.25turn, #687980, #02475e, #687980);
+  background-image: linear-gradient(0.20turn, #13334c, #005792, #f6f6e9);
 
 }
 
@@ -25,22 +25,20 @@ body {
   font-family: inherit;
   font-weight: lighter;
   letter-spacing: 1px;
-  color: #eef0f2;
+  color: #1b1717;
   position: absolute;
   top: 15px;
   right: 40px;
-  border: solid 1px #32424a;
-  padding: 5px 10px 5px 10px;
 }
 
 
 .pokemon-list {
   text-align: inherit;
   list-style-type: none;
-  display: inline-grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  /*display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-row-gap: 10px;
-  grid-column-gap: 30px;
+  grid-column-gap: 30px;*/
 }
 
 .main-list-button {
@@ -48,23 +46,22 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   background-color: inherit;
-  color: black;
+  color: #1b1717;
   width: 250px;
   height: 50px;
-  /*border: solid 1px black;*/
-  box-shadow: 2px 5px 5px #32424a;
+  /*border: solid 2px #1b1717;*/
+  box-shadow:20px 20px 50px 10px #eeebdd inset;
+  /*box-shadow: 2px 5px 5px #1b1717;*/
   border-radius: 5px;
   margin: 5px;
   transition-duration: 0.5s;
 }
 
 .main-list-button:hover, .main-list-button:active {
-  letter-spacing: 1.5px;
-  /*background-color: #d2d3c9;*/
-  background: #eef0f2;
-  color: black;
+  letter-spacing: 3px;
+  color: #1b1717;
   cursor: pointer;
   border-radius: 10px;
-  border: solid 1px #32424a;
-  box-shadow: 2px 5px 5px #32424a;
+  box-shadow:20px 20px 50px 10px #f0c929 inset;
+  border: solid 1px #1b1717;
 }
