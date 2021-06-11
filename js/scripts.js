@@ -1,14 +1,22 @@
+// IIFE
+
 let pokemonRepository = (function() {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+
+  // Push pokemon
+
+  function add(pokemon) {
+    pokemonList.push(pokemon);
+  }
+
+  // Returns list of pokemon from API generated repo + pushed pokemon
 
   function getAll() {
     return pokemonList;
   }
 
-  function add(pokemon) {
-    pokemonList.push(pokemon);
-  }
+  // Creates buttons for all pokemon
 
   function addListItem(pokemon) {
     let mainList = document.querySelector('ul');
@@ -22,6 +30,8 @@ let pokemonRepository = (function() {
     listItem.appendChild(button);
     mainList.appendChild(listItem);
   }
+
+  // Fetch pokemon list from API
 
   function loadList() {
     return fetch(apiUrl).then(function(response) {
@@ -39,6 +49,8 @@ let pokemonRepository = (function() {
     })
   }
 
+  // Fetch pokemon details from API
+
   function loadDetails(item) {
     let url = item.detailsUrl;
     return fetch(url).then(function(response) {
@@ -52,11 +64,15 @@ let pokemonRepository = (function() {
     });
   }
 
+  // Display pokemon details modal
+
   function showDetails(item) {
     pokemonRepository.loadDetails(item).then(function() {
       console.log(item);
     });
   }
+
+  // Return all functions as global variables
 
   return {
     getAll: getAll,
@@ -68,6 +84,9 @@ let pokemonRepository = (function() {
   };
 })();
 
+// End of IIFE
+
+// Loads API generated list, then gets complete list with any pushed pokemon & for each pokemon creates a list item.
 
 pokemonRepository.loadList().then(function() {
   pokemonRepository.getAll().forEach(function(pokemon) {
