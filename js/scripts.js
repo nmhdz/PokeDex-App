@@ -102,7 +102,6 @@ let pokemonRepository = (function() {
     closeButtonElement.innerText = 'Close';
     closeButtonElement.addEventListener('click', hideModal);
 
-
     let pokemonName = document.createElement('h1');
     pokemonName.innerText = item.name;
     let pokemonImage = document.createElement('img');
@@ -114,7 +113,6 @@ let pokemonRepository = (function() {
     pokemonTypes.innerText = 'Types: ' + item.types;
     let pokemonAbilities = document.createElement('p');
     pokemonAbilities.innerText = 'Abilities: ' + item.abilities;
-
 
     modal.appendChild(closeButtonElement);
     modal.appendChild(pokemonName);
@@ -149,9 +147,6 @@ let pokemonRepository = (function() {
   document.querySelector('#show-modal').addEventListener('click', () => {
     showModal('Modal title', 'This is the modal content!');
   });
-
-
-
 
   // Return all functions as global variables
 
