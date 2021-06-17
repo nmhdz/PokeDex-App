@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -13,25 +13,56 @@
 </head>
 
 <body>
-  <header>
+  <!--<header>
     <img src="img/pokemon_logo.png" class="pokemon-logo" alt="Pokemon logo">
     <img src="img/pokemon-image.png" class="pokemon-image" alt="Photo of different pokemon">
     <h1 class="pokedex-title">Pokédex</h1>
+  </header>-->
+
+  <header>
+    <nav class="navbar fixed-top pokemon-img">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/pokemon_logo.png" width="250" height="85" alt="Pokemon logo" class="pokemon-logo" />
+      </a>
+      <form class="form-inline">
+        <input placeholder="Search for a character" onkeyup="myFunction()" size="22" class="form-control" id="searchBar" type="search" value="" aria-label="search">
+        <button class="btn" type="submit" onclick="findPokemon()">Search</button>
+      </form>
+    </nav>
   </header>
 
   <main>
-    <ul class="pokemon-list"></ul>
-    <div id='modal-container'></div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">...</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <ul class="list-group" id="list-group"></ul>
+    </div>
   </main>
 
-  <!-- Polyfills -->
+  <!--Polyfills-->
+
   <script src="js/promise-polyfill.js"></script>
   <script src="js/fetch.umd.js"></script>
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<!-- Personal js file-->
+
+  <!-- Personal js file-->
+
   <script src="js/scripts.js"></script>
 </body>
 
