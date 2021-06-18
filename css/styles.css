@@ -11,7 +11,7 @@ h1 {
   font-weight: bold;
 }
 
-h2{
+h2 {
   font-size: 40px;
   font-style: italic;
   letter-spacing: 1px;
@@ -61,12 +61,13 @@ h2{
   transition-duration: 0.5s;
 }
 
-.pokemon-button:hover, .pokemon-button:active {
+.pokemon-button:hover,
+.pokemon-button:active {
   font-size: 18px;
   letter-spacing: 1.5px;
   background-color: #DBDBDB;
   color: #28527A;
-  border: solid 2px #000;
+  border: solid 4px #000;
   border-radius: 10px;
 }
 
@@ -82,10 +83,6 @@ h2{
 @media all and (max-width: 480px) {
   .navbar {
     display: block;
-  }
-
-  span{
-    position: fixed;
   }
 
   .pokemon-logo {
