@@ -16,4 +16,4 @@ The objective of this project was to build a small web application with **HTML**
 ## API
 External API utilized: https://pokeapi.co/
 ## Deployment
-Then [Pokedex](https://nmhdz.github.io/PokeDex-App/) app is live on GitHub Pages!
+The [Pokedex](https://nmhdz.github.io/PokeDex-App/) app is live on GitHub Pages!
