@@ -1,5 +1,5 @@
 # Simple JavaScript App (Pokédex)
-*In-progress* 👩🏻‍💻
+*Completed*
 ## Project Description 
 The objective of this project was to build a small web application with **HTML**, **CSS**, and **JavaScript** that loads data from an external API and enables viewing of data points in detail.
 ## Key Features
