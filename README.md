@@ -12,6 +12,6 @@ The objective of this project was to build a small web application with **HTML**
 * Javascript
 * Eslint
 * W3C Validation
-* Bootsrap
+* Bootstrap
 ## API
 External API utilized: https://pokeapi.co/
