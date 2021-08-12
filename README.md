@@ -6,10 +6,11 @@ The objective of this project was to build a small web application with **HTML**
 * Load data from an external source (API)
 * View a list of items
 * On user action (e.g., by clicking on a list item), view details for that item
- ## Project Dependencies
+## Languages
 * HTML
 * CSS
 * Javascript
+## Project Dependencies
 * Eslint
 * W3C Validation
 * Bootstrap
